@@ -1,0 +1,1 @@
+// An author contains Name, Email, Username(@Email), password, title, profile image

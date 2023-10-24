@@ -1,0 +1,1 @@
+// contains title, slugify, description(main article),author,image
