@@ -6,7 +6,7 @@ export type postDocument = Document &{
     slug:string,
     description:string,
     author:string,
-    image:string
+    photo:string
 }
 
 export const postSchema = new Schema({
