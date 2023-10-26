@@ -4,7 +4,7 @@ export type commentDocument = Document & {
     comment:string,
     nameOfPoster:string,
     email:string,
-    post:string
+    postId:string
 }
 
 export const commentSchema = new Schema({
@@ -29,7 +29,7 @@ export const commentSchema = new Schema({
         },
         required:[true,'email is required']
     },
-    post:{
+    postId:{
         type:Schema.Types.ObjectId,
         ref: 'Posts',
         required:[true,'a comment must have a post']
