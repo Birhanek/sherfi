@@ -45,6 +45,17 @@ export class UnauthorizedError extends ApiError {
     }
   }
 
+  // Not allowed error
+  export class NotAllowedError extends ApiError {
+    constructor(
+      readonly message: string = 'Not Allowed',
+      readonly statusCode: number = 405,
+      source?: Error | any
+    ) {
+      super(statusCode, message, source)
+    }
+  }
+
 // Bad request error
 export class BadRequestError extends ApiError {
     constructor(
