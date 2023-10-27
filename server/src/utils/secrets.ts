@@ -18,6 +18,9 @@ const production = ENVIRONMENT === 'production' // Anything else is treated as '
 export const MONGODB_URL = process.env['MONGODB_URL'] as string
 export const CLIENT_URL = (process.env['CLIENT_URL'] as string)  || 'http://127.0.0.1:3000'
 
+export const SMTP_USER_NAME = process.env['SMTP_USER_NAME'] as string
+export const SMTP_USER_PASS = process.env['SMTP_USER_PASS'] as string
+
 if(!CLIENT_URL){
     logger.error('No client secret. Set CLIENT_URL environment variable.')
   process.exit(1)
