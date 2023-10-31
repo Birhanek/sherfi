@@ -6,6 +6,7 @@ export type postDocument = Document &{
     slug:string,
     description:string,
     author:string,
+    category:string,
     photo:string
 }
 
@@ -26,6 +27,10 @@ export const postSchema = new Schema({
     author:{
         type:Schema.Types.ObjectId,
         required:[true,'each post must have an author']
+    },
+    category:{
+        type:Schema.Types.ObjectId,
+        required:[true,`a post must have a category`]
     },
     photo:{
         type:String,
